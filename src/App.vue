@@ -11,7 +11,7 @@ export default {
   name: "app",
   data() {
     return {
-      stepList: ['填写申请表', '上传资料', '客户信息确认', '完成']
+      stepList: ['First Step', 'Second Step', 'Third Step', 'Four Step']
     };
   },
   components: {
