@@ -16,7 +16,7 @@ npm run dev
 yarn run dev
 ```
 
-## How To Use
+## Usage
 ``` bash
 # example
 <template>
@@ -43,3 +43,6 @@ export default {
 ```
 ## Demo Screenshot
 ![Demo Screenshot](./screenshot/demo.png)
+
+## License
+MIT
