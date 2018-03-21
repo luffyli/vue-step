@@ -24,18 +24,10 @@ export default {
       required: true
     }
   },
-  data() {
-    return {
-      // stepList: ['aaaaaaaaaaa', 'bbb', 'ccc']
-    };
-  },
   computed: {
     stepItemWidth() {
       return 100 / this.stepList.length;
     }
-  },
-  mounted() {
-    console.log(this.nowStep, this.stepList);
   }
 };
 </script>
@@ -60,7 +52,7 @@ export default {
   left: 0;
   width: 200px;
   height: inherit;
-  background-color: green;
+  background-color: #1fb11d;
 }
 .v-step-list {
   position: relative;
@@ -90,6 +82,6 @@ export default {
 }
 .step-active {
   color: #fff;
-  background-color: green;
+  background-color: #1fb11d;
 }
 </style>

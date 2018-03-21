@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <Step :now-step="2" :stepList="stepList"></Step>
+    <Step :now-step="2" :step-list="stepList"></Step>
   </div>
 </template>
 

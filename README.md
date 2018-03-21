@@ -2,7 +2,7 @@
 
 > 基于Vue.js的移动端步骤导航组件 Mobile Step Navigation Component Based On Vue.js
 
-## Build Setup
+## Build Setup 
 
 ``` bash
 # install dependencies
@@ -21,7 +21,7 @@ yarn run dev
 # example
 <template>
   <div id="app">
-    <Step :now-step="2" :stepList="stepList"></Step>
+    <Step :now-step="2" :step-list="stepList"></Step>
   </div>
 </template>
 
@@ -41,7 +41,15 @@ export default {
 };
 </script>
 ```
+## API
+
+| Param     | Description       | Type     | Default |
+| --------- | ----------------- | -------- | ------- |
+| now-step  | The current step  | `Number` | -       |
+| step-list | Name of all steps | `Array`  | -       |
+
 ## Demo Screenshot
+
 ![Demo Screenshot](./screenshot/demo.png)
 
 ## License
