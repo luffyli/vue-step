@@ -2,18 +2,10 @@
 
 > 基于Vue.js的移动端步骤导航组件 Mobile Step Navigation Component Based On Vue.js
 
-## Build Setup 
+## Installation
 
 ``` bash
-# install dependencies
-npm install
-# or
-yarn install
-
-# serve with hot reload at localhost:8080
-npm run dev
-# or
-yarn run dev
+npm i vue-step -S
 ```
 
 ## Usage
@@ -26,7 +18,7 @@ yarn run dev
 </template>
 
 <script>
-import Step from "./components/Step.vue"
+import Step from "vue-step"
 
 export default {
   name: "app",
