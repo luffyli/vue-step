@@ -37,8 +37,9 @@ export default {
 
 | Param     | Description       | Type     | Default |
 | --------- | ----------------- | -------- | ------- |
-| now-step  | The current step  | `Number` | -       |
+| now-step  | The current step, The starting value is 1.  | `Number` | -       |
 | step-list | Name of all steps | `Array`  | -       |
+| active-color | Active status color | `String`  | '#1fb11d'       |
 
 ## Demo Screenshot
 

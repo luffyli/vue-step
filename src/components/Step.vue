@@ -1,12 +1,12 @@
 <template>
     <div class="v-step-warp" ref="step">
         <div class="v-step-progress-bg">
-            <div class="v-step-progress-value" :style="{width: (stepItemWidth * 2) + '%'}"></div>
+            <div class="v-step-progress-value" :style="progressStyle"></div>
         </div>
         <ul class="v-step-list">
             <li class="v-step-item" v-for="(label, index) in stepList" :key="index" :style="{width: stepItemWidth + '%'}">
                 <label class="v-step-item-label">{{ label }}</label>
-                <div class="v-step-item-number" :class="{'step-active': index < nowStep}">{{ index + 1 }}</div>
+                <div class="v-step-item-number" :style="[index < nowStep ? itemNumberClass : '']">{{ index + 1 }}</div>
             </li>
         </ul>
     </div>
@@ -14,6 +14,7 @@
 
 <script>
 export default {
+  name: "step",
   props: {
     nowStep: {
       type: Number,
@@ -22,11 +23,27 @@ export default {
     stepList: {
       type: Array,
       required: true
+    },
+    activeColor: {
+      type: String,
+      default: "#1fb11d"
     }
   },
   computed: {
     stepItemWidth() {
-      return 100 / this.stepList.length;
+      return 100 / this.stepList.length
+    },
+    progressStyle() {
+      return {
+        width: this.stepItemWidth * 2 + "%",
+        "background-color": this.activeColor
+      }
+    },
+    itemNumberClass() {
+      return {
+        "background-color": this.activeColor,
+        color: "#fff"
+      }
     }
   }
 };
@@ -52,7 +69,6 @@ export default {
   left: 0;
   width: 200px;
   height: inherit;
-  background-color: #1fb11d;
 }
 .v-step-list {
   position: relative;
@@ -79,9 +95,5 @@ export default {
   border-radius: 50%;
   color: #666;
   background-color: #ddd;
-}
-.step-active {
-  color: #fff;
-  background-color: #1fb11d;
 }
 </style>

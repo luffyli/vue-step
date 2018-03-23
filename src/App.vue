@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <Step :now-step="2" :step-list="stepList"></Step>
+    <Step :now-step="nowStep" :step-list="stepList"></Step>
   </div>
 </template>
 
@@ -11,6 +11,7 @@ export default {
   name: "app",
   data() {
     return {
+      nowStep: 2,
       stepList: ['First Step', 'Second Step', 'Third Step', 'Four Step']
     };
   },
