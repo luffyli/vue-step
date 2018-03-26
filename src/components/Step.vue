@@ -1,12 +1,12 @@
 <template>
-    <div class="v-step-warp" ref="step">
+    <div class="v-step-warp" :class="styleType" ref="step">
         <div class="v-step-progress-bg">
             <div class="v-step-progress-value" :style="progressStyle"></div>
         </div>
         <ul class="v-step-list">
             <li class="v-step-item" v-for="(label, index) in stepList" :key="index" :style="{width: stepItemWidth + '%'}">
                 <label class="v-step-item-label">{{ label }}</label>
-                <div class="v-step-item-number" :style="[index < nowStep ? itemNumberClass : '']">{{ index + 1 }}</div>
+                <div class="v-step-item-number" :style="[index < nowStep ? itemNumberClass : '']">{{ styleType !== 'style2' ? index + 1 : ''}}</div>
             </li>
         </ul>
     </div>
@@ -27,6 +27,10 @@ export default {
     activeColor: {
       type: String,
       default: "#1fb11d"
+    },
+    styleType: {
+      type: String,
+      default: "style1"
     }
   },
   computed: {
@@ -60,14 +64,13 @@ export default {
   position: absolute;
   width: 100%;
   height: 4px;
-  bottom: 23px;
+  bottom: 22px;
   background-color: #ddd;
 }
 .v-step-progress-value {
   position: inherit;
   top: 0;
   left: 0;
-  width: 200px;
   height: inherit;
 }
 .v-step-list {
@@ -78,6 +81,7 @@ export default {
   margin: 0;
   padding: 0;
   list-style: none;
+  text-align: center;
 }
 .v-step-item-label {
   overflow: hidden;
@@ -87,13 +91,22 @@ export default {
   color: #666;
 }
 .v-step-item-number {
-  width: 20px;
-  height: 20px;
-  line-height: 20px;
+  width: 18px;
+  height: 18px;
+  line-height: 18px;
   margin: 5px auto;
   font-size: 12px;
   border-radius: 50%;
   color: #666;
   background-color: #ddd;
+}
+.style2 .v-step-progress-bg {
+  height: 3px;
+  bottom: 18px;
+}
+.style2 .v-step-item-number {
+  width: 10px;
+  height: 10px;
+  line-height: 10px;
 }
 </style>

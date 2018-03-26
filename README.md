@@ -13,7 +13,7 @@ npm i vue-step -S
 # example
 <template>
   <div id="app">
-    <Step :now-step="2" :step-list="stepList"></Step>
+    <Step :now-step="nowStep" :step-list="stepList"></Step>
   </div>
 </template>
 
@@ -24,6 +24,7 @@ export default {
   name: "app",
   data() {
     return {
+      nowStep: 2,
       stepList: ['First Step', 'Second Step', 'Third Step', 'Four Step']
     };
   },
@@ -40,6 +41,7 @@ export default {
 | now-step  | The current step, The starting value is 1.  | `Number` | -       |
 | step-list | Name of all steps | `Array`  | -       |
 | active-color | Active status color | `String`  | '#1fb11d'       |
+| style-type | You can set 'style1' or 'style2' | `String`  | 'style1'       |
 
 ## Demo Screenshot
 
