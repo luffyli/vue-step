@@ -4,6 +4,10 @@
     <Step :now-step="nowStep" :step-list="stepList"></Step>
     <p>style2:</p>
     <Step :now-step="nowStep" :step-list="stepList" style-type="style2"></Step>
+    <p>vertical style1</p>
+    <Step :now-step="nowStep" :step-list="stepList" direction="vertical"></Step>
+    <p>vertical style2</p>
+    <Step :now-step="nowStep" :step-list="stepList" direction="vertical" style-type="style2"></Step>
   </div>
 </template>
 
@@ -25,6 +29,9 @@ export default {
 </script>
 
 <style>
+body {
+  margin: 8px;
+}
 #app {
   font-family: "Avenir", Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;

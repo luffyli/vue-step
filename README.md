@@ -42,6 +42,7 @@ export default {
 | step-list | Name of all steps | `Array`  | -       |
 | active-color | Active status color | `String`  | '#1fb11d'       |
 | style-type | You can set 'style1' or 'style2' | `String`  | 'style1'       |
+| direction | You can set 'horizontal' or 'vertical' | `String`  | 'horizontal'       |
 
 ## Demo Screenshot
 
