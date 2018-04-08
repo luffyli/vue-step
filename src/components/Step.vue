@@ -149,13 +149,14 @@ li {
   width: inherit;
 }
 .v-step-warp-vertical .v-step-list {
+  height: inherit;
   flex-direction: column;
   padding-left: 8px;
 }
 .v-step-warp-vertical .v-step-item {
   display: -webkit-flex;
   display: flex;
-  height: 45px;
+  height: 25%;
   align-items: center;
 }
 .v-step-warp-vertical .v-step-item-number {
