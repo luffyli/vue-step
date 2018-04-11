@@ -1,7 +1,7 @@
 {
   "name": "vue-step",
   "description": "基于Vue.js的移动端步骤导航组件 Mobile Step Navigation Component Based On Vue.js",
-  "version": "1.0.6",
+  "version": "1.0.7",
   "author": "justli <justlilong@outlook.com>",
   "license": "MIT",
   "private": false,

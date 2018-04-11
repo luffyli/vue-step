@@ -18,20 +18,20 @@ npm i vue-step -S
 </template>
 
 <script>
-import Step from "vue-step"
+import Step from 'vue-step'
 
 export default {
-  name: "app",
-  data() {
+  name: 'app',
+  data () {
     return {
       nowStep: 2,
       stepList: ['First Step', 'Second Step', 'Third Step', 'Four Step']
-    };
+    }
   },
   components: {
     Step
   }
-};
+}
 </script>
 ```
 ## API

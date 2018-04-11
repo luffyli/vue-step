@@ -12,20 +12,20 @@
 </template>
 
 <script>
-import Step from "./components/Step.vue"
+import Step from './components/Step.vue'
 
 export default {
-  name: "app",
-  data() {
+  name: 'app',
+  data () {
     return {
       nowStep: 2,
       stepList: ['First Step', 'Second Step', 'Third Step', 'Four Step']
-    };
+    }
   },
   components: {
     Step
   }
-};
+}
 </script>
 
 <style>

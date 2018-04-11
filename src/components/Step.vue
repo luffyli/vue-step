@@ -14,7 +14,7 @@
 
 <script>
 export default {
-  name: "step",
+  name: 'step',
   props: {
     nowStep: {
       type: Number,
@@ -26,38 +26,39 @@ export default {
     },
     activeColor: {
       type: String,
-      default: "#1fb11d"
+      default: '#1fb11d'
     },
     styleType: {
       type: String,
-      default: "style1"
+      default: 'style1'
     },
     direction: {
       type: String,
-      default: "horizontal"
+      default: 'horizontal'
     }
   },
   computed: {
-    stepItemWidth() {
+    stepItemWidth () {
       return 100 / this.stepList.length
     },
-    horizontalItemWidth() {
+    horizontalItemWidth () {
       return this.direction === 'vertical' ? '' : { width: this.stepItemWidth + '%' }
     },
-    progressStyle() {
+    progressStyle () {
       let oStyle = {
-        "background-color": this.activeColor
+        'background-color': this.activeColor
       }
-      if (this.direction === 'vertical')
-        oStyle.height = this.stepItemWidth * this.nowStep + "%"
-      else
-        oStyle.width = this.stepItemWidth * this.nowStep + "%"
+      if (this.direction === 'vertical') {
+        oStyle.height = this.stepItemWidth * this.nowStep + '%'
+      } else {
+        oStyle.width = this.stepItemWidth * this.nowStep + '%'
+      }
       return oStyle
     },
-    itemNumberStyle() {
+    itemNumberStyle () {
       return {
-        "background-color": this.activeColor,
-        color: "#fff"
+        'background-color': this.activeColor,
+        color: '#fff'
       }
     }
   }
