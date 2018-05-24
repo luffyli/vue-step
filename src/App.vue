@@ -1,18 +1,18 @@
 <template>
   <div id="app">
     <p>style1:</p>
-    <Step :now-step="nowStep" :step-list="stepList"></Step>
+    <vue-step :now-step="nowStep" :step-list="stepList"></vue-step>
     <p>style2:</p>
-    <Step :now-step="nowStep" :step-list="stepList" style-type="style2"></Step>
+    <vue-step :now-step="nowStep" :step-list="stepList" style-type="style2"></vue-step>
     <p>vertical style1</p>
-    <Step class="initHeight" :now-step="nowStep" :step-list="stepList" direction="vertical"></Step>
+    <vue-step class="initHeight" :now-step="nowStep" :step-list="stepList" direction="vertical"></vue-step>
     <p>vertical style2</p>
-    <Step class="initHeight" :now-step="nowStep" :step-list="stepList" direction="vertical" style-type="style2"></Step>
+    <vue-step class="initHeight" :now-step="nowStep" :step-list="stepList" direction="vertical" style-type="style2"></vue-step>
   </div>
 </template>
 
 <script>
-import Step from './components/Step.vue'
+import vueStep from './components/Step.vue'
 
 export default {
   name: 'app',
@@ -23,7 +23,7 @@ export default {
     }
   },
   components: {
-    Step
+    vueStep
   }
 }
 </script>
