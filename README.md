@@ -4,6 +4,8 @@
 >
 > [DEMO](https://luffyli.github.io/vue-step/) (Please use the mobile device to open the demo)
 
+[![NPM](https://nodei.co/npm/vue-step.png)](https://nodei.co/npm/vue-step/)
+
 ## Installation
 
 ``` bash
