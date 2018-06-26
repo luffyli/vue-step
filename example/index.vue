@@ -12,7 +12,7 @@
 </template>
 
 <script>
-import VueStep from '../vue-step.vue'
+import VueStep from '../src/vue-step.vue'
 
 export default {
   name: 'app',
