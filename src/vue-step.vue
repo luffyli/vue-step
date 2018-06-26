@@ -14,7 +14,7 @@
 
 <script>
 export default {
-  name: 'step',
+  name: 'vue-step',
   props: {
     nowStep: {
       type: Number,

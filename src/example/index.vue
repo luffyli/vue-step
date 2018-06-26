@@ -12,7 +12,7 @@
 </template>
 
 <script>
-import vueStep from './components/Step.vue'
+import VueStep from '../vue-step.vue'
 
 export default {
   name: 'app',
@@ -23,7 +23,7 @@ export default {
     }
   },
   components: {
-    vueStep
+    VueStep
   }
 }
 </script>

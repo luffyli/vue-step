@@ -1,36 +1,32 @@
 {
   "name": "vue-step",
-  "description": "基于Vue.js的移动端步骤导航组件 Mobile Step Navigation Component Based On Vue.js",
-  "version": "1.1.2",
+  "version": "1.2.0",
+  "description": "Mobile Step Navigation Component Based On Vue.js",
   "author": "justli <justlilong@outlook.com>",
   "license": "MIT",
   "private": false,
-  "main": "src/components/Step.vue",
+  "main": "dist/vue-step.umd.js",
+  "module": "dist/vue-step.esm.js",
+  "unpkg": "dist/vue-step.min.js",
+  "browser": {
+    "./sfc": "src/vue-step.vue"
+  },
   "scripts": {
-    "dev": "cross-env NODE_ENV=development webpack-dev-server --open --hot",
-    "build": "cross-env NODE_ENV=production webpack --progress --hide-modules"
+    "example": "vue serve ./src/example/index.vue",
+    "build": "npm run build:unpkg & npm run build:es & npm run build:umd",
+    "build:umd": "rollup --config build/rollup.config.js --format umd --file dist/vue-step.umd.js",
+    "build:es": "rollup --config build/rollup.config.js --format es --file dist/vue-step.esm.js",
+    "build:unpkg": "rollup --config build/rollup.config.js --format iife --file dist/vue-step.min.js"
   },
-  "dependencies": {
-    "vue": "^2.5.11"
-  },
-  "browserslist": [
-    "> 1%",
-    "last 2 versions",
-    "not ie <= 8"
-  ],
+  "dependencies": {},
   "devDependencies": {
-    "babel-core": "^6.26.0",
-    "babel-loader": "^7.1.2",
-    "babel-preset-env": "^1.6.0",
-    "babel-preset-stage-3": "^6.24.1",
-    "cross-env": "^5.0.5",
-    "css-loader": "^0.28.7",
-    "file-loader": "^1.1.4",
-    "html-webpack-plugin": "^3.2.0",
-    "vue-loader": "^13.0.5",
-    "vue-template-compiler": "^2.4.4",
-    "webpack": "^3.6.0",
-    "webpack-dev-server": "^2.9.1"
+    "minimist": "^1.2.0",
+    "rollup": "^0.57.1",
+    "rollup-plugin-buble": "^0.19.2",
+    "rollup-plugin-uglify-es": "0.0.1",
+    "rollup-plugin-vue": "^3.0.0",
+    "vue": "^2.5.16",
+    "vue-template-compiler": "^2.5.16"
   },
   "keywords": [
     "步骤条",
