@@ -3,6 +3,7 @@
 > 基于Vue.js的移动端步骤导航组件 Mobile Step Navigation Component Based On Vue.js
 >
 
+
 [![NPM](https://nodei.co/npm/vue-step.png)](https://nodei.co/npm/vue-step/)
 
 ## Installation
