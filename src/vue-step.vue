@@ -30,7 +30,10 @@ export default {
     },
     styleType: {
       type: String,
-      default: 'style1'
+      default: 'style1',
+      validator: (value) => {
+        return ['style1', 'style2'].indexOf(value) !== -1
+      }
     },
     direction: {
       type: String,
@@ -75,12 +78,6 @@ export default {
 </script>
 
 <style scoped>
-ul,
-li {
-  margin: 0;
-  padding: 0;
-  list-style-type: none;
-}
 .v-step-warp-horizontal {
   position: relative;
   padding: 10px 0;
@@ -103,6 +100,12 @@ li {
   position: relative;
   display: -webkit-flex;
   display: flex;
+}
+.v-step-list,
+.v-step-item {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
 }
 .v-step-warp-horizontal .v-step-list {
   justify-content: space-around;
