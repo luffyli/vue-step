@@ -6,7 +6,7 @@
     <ul class="v-step-list">
       <li class="v-step-item" v-for="(label, index) in stepList" :key="index" :style="horizontalItemWidth">
         <label class="v-step-item-label">{{ label }}</label>
-        <div class="v-step-item-number" :style="[index < nowStep ? itemNumberStyle : '']">{{ styleType !== 'style2' ? index + 1 : ''}}</div>
+        <div class="v-step-item-number" :style="itemNumberStyle(index)">{{ showItemNumber(index) }}</div>
       </li>
     </ul>
   </div>
@@ -54,12 +54,21 @@ export default {
         oStyle.width = this.stepItemWidth * this.nowStep + '%'
       }
       return oStyle
-    },
-    itemNumberStyle () {
-      return {
-        'background-color': this.activeColor,
-        color: '#fff'
+    }
+  },
+  methods: {
+    itemNumberStyle (index) {
+      let style = ''
+      if (index < this.nowStep) {
+        style = {
+          'background-color': this.activeColor,
+          'color': '#fff'
+        }
       }
+      return style
+    },
+    showItemNumber (index) {
+      return this.styleType !== 'style2' ? index + 1 : ''
     }
   }
 }
@@ -113,6 +122,7 @@ li {
   background-color: #ddd;
 }
 .v-step-warp-horizontal .v-step-item-label {
+  display: block;
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;

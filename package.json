@@ -1,6 +1,6 @@
 {
   "name": "vue-step",
-  "version": "1.2.1",
+  "version": "1.2.2",
   "description": "Mobile Step Navigation Component Based On Vue.js",
   "author": "justli <justlilong@outlook.com>",
   "license": "MIT",
@@ -12,7 +12,7 @@
     "./sfc": "src/vue-step.vue"
   },
   "scripts": {
-    "example": "vue serve ./example/index.vue",
+    "example": "vue serve ./example/index.vue --open",
     "build": "npm run build:unpkg & npm run build:es & npm run build:umd",
     "build:umd": "rollup --config build/rollup.config.js --format umd --file dist/vue-step.umd.js",
     "build:es": "rollup --config build/rollup.config.js --format es --file dist/vue-step.esm.js",
