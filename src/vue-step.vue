@@ -1,12 +1,29 @@
 <template>
   <div :class="[`v-step-warp-${direction}`, styleType]">
     <div class="v-step-progress-bg">
-      <div class="v-step-progress-value" :style="progressStyle"></div>
+      <div
+        class="v-step-progress-value"
+        :style="progressStyle"
+      >
+      </div>
     </div>
     <ul class="v-step-list">
-      <li class="v-step-item" v-for="(label, index) in stepList" :key="index" :style="horizontalItemWidth">
-        <label class="v-step-item-label">{{ label }}</label>
-        <div class="v-step-item-number" :style="itemNumberStyle(index)">{{ showItemNumber(index) }}</div>
+      <li
+        v-for="(label, index) in stepList"
+        :key="index"
+        class="v-step-item"
+        :style="horizontalItemWidth"
+        @click="selectItem(index)"
+      >
+        <label class="v-step-item-label">
+          {{ label }}
+        </label>
+        <div
+          class="v-step-item-number"
+          :style="itemNumberStyle(index)"
+        >
+          {{ showItemNumber(index) }}
+        </div>
       </li>
     </ul>
   </div>
@@ -45,7 +62,9 @@ export default {
       return 100 / this.stepList.length
     },
     horizontalItemWidth () {
-      return this.direction === 'vertical' ? '' : { width: this.stepItemWidth + '%' }
+      return this.direction === 'vertical'
+        ? ''
+        : { width: this.stepItemWidth + '%' }
     },
     progressStyle () {
       let oStyle = {
@@ -72,6 +91,9 @@ export default {
     },
     showItemNumber (index) {
       return this.styleType !== 'style2' ? index + 1 : ''
+    },
+    selectItem (itemIndex) {
+      this.$emit('selected', this.showItemNumber(itemIndex))
     }
   }
 }
@@ -100,6 +122,8 @@ export default {
   position: relative;
   display: -webkit-flex;
   display: flex;
+  cursor: pointer;
+  user-select: none;
 }
 .v-step-list,
 .v-step-item {
